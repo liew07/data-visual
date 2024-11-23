@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar with Toggle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+          
+        
+            <ul>
+                <li id="Home" class="active" onclick="setActive('Home')">Home</li>
+                <li id="Background" onclick="setActive('Background')">Background</li>
+                <li id="Aim & Objectives" onclick="setActive('Aim & Objectives')">Aim & Objectives</li>
+                <li id="ict" class="dropdown">
+                    <span onclick="toggleDropdown()">Project Overview▾</span>
+                    <ul id="dropdown-menu" class="dropdown-menu hidden">
+                        <li id="Visualisation 1" onclick="setActive('Visualisation 1')">Visualisation 1</li>
+                        <li id="Visualisation 2" onclick="setActive('Visualisation 2')">Visualisation 2</li>
+                        <li id="Visualisation 3" onclick="setActive('Visualisation 3')">Visualisation 3</li>
+                    </ul>
+                </li>
+                <li id="About Us" onclick="setActive('About Us')">About Us</li>
+                <li id="Documentation" onclick="setActive('Documentation')">Documentation</li>
+            </ul>
+            
+
+        </div>
+
+        <!-- Open Sidebar Button -->
+        <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="overview">
+                <h2>Overview</h2>
+                <div class="cards">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <img src="https://via.placeholder.com/80" alt="Icon 1">
+                        <h3>291.99</h3>
+                        <p>Market Share</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <img src="https://via.placeholder.com/80" alt="Icon 2">
+                        <h3>110.41</h3>
+                        <p>Contribution to Economy</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <img src="https://via.placeholder.com/80" alt="Icon 3">
+                        <h3>320.00</h3>
+                        <p>ICT Contribution to Growth</p>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Footer -->
+                <div class="footer">
+                    @COS30045 Data Visualisation Project
+                </div>
+                 <!-- Footer -->
+                 <div class="footer-right">
+                    By Jonathan & Chai Ching & Emelee
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+   
+    
+        
+    
+
+     
+    <script src="script.js"></script>
+</body>
+</html>
