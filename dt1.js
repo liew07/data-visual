@@ -1,226 +1,202 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Data for the chart
-    const labels = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023];
-    const gdpBarData = [1356.12, 1355.17, 1436.995, 1614.555, 1643.31, 1518.57, 1682.235, 1831.635, 1528.425];
+// Data for Chart 1
+const data1 = [ 
+    { year: "2014-15", industry: 0.22, household: 3.49 },
+    { year: "2015-16", industry: 0.29, household: 3.46 },
+    { year: "2016-17", industry: 0.26, household: 3.40 },
+    { year: "2017-18", industry: 0.27, household: 3.38 },
+    { year: "2018-19", industry: 0.37, household: 3.44 },
+    { year: "2019-20", industry: 0.41, household: 3.52 },
+    { year: "2020-21", industry: 0.31, household: 3.41 },
+    { year: "2021-22", industry: 0.31, household: 3.43 }
+];
 
-    // Data for five sectors
-    const agricultureData = [97539, 105756, 117995, 108757, 109542, 115834, 148152, 160567, 141930];
-    const miningData = [103059, 103959, 121326, 134833, 131084, 96172, 124355, 178439, 155983];
-    const manufacturingData = [262379, 272396, 299797, 311676, 323862, 315360, 361826, 418538, 419584];
-    const constructionData = [55382, 61089, 66552, 70048, 71067, 57657, 55654, 60810, 65949];
-    const servicesData = [643883, 689969, 747360, 804993, 860130, 817713, 841692, 956737, 1018972];
+// Chart 1 Setup
+const margin1 = { top: 20, right: 30, bottom: 40, left: 50 },
+      width1 = 800 - margin1.left - margin1.right,
+      height1 = 500 - margin1.top - margin1.bottom;
 
-    // Set up margins and dimensions for the chart
-    const margin = { top: 100, right: 60, bottom: 50, left: 500 };
-    const width = 1200;
-    const height = 500;
+const svg1 = d3.select("#chart1")
+    .attr("width", width1 + margin1.left + margin1.right)
+    .attr("height", height1 + margin1.top + margin1.bottom)
+    .append("g")
+    .attr("transform", `translate(${margin1.left},${margin1.top})`);
 
-    // Create the SVG container
-    const svg = d3.select("#gdpChart")
-        .append("svg")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+const x0 = d3.scaleBand()
+    .domain(data1.map(d => d.year))
+    .range([0, width1])
+    .padding(0.2);
 
-    // Scales
-    const xScale = d3.scaleBand()
-        .domain(labels)
-        .range([0, width])
-        .padding(0.1);
+const x1 = d3.scaleBand()
+    .domain(["industry", "household"])
+    .range([0, x0.bandwidth()])
+    .padding(0.1);
 
-    const yScaleGDP = d3.scaleLinear()
-        .domain([0, d3.max(gdpBarData) + 200]) // Adjust the max value for some padding
-        .nice()
-        .range([height, 0]);
+const y1 = d3.scaleLinear()
+    .domain([0, d3.max(data1, d => Math.max(d.industry, d.household))])
+    .nice()
+    .range([height1, 0]);
 
-    const yScaleSector = d3.scaleLinear()
-        .domain([0, d3.max(servicesData)]) // Maximum value from the sector data (services)
-        .nice()
-        .range([height, 0]);
+const color1 = d3.scaleOrdinal()
+    .domain(["industry", "household"])
+    .range(["#1f77b4", "#ff7f0e"]);
 
-    // Add X axis
-    svg.append("g")
-        .attr("class", "x-axis")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(xScale).tickSize(0));
+// Tooltip for Chart 1
+const tooltip1 = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0)
+    .style("position", "absolute")
+    .style("background", "#f9f9f9")
+    .style("padding", "8px")
+    .style("border", "1px solid #ddd")
+    .style("border-radius", "4px");
 
-    // Add Y axis for GDP
-    svg.append("g")
-        .attr("class", "y-axis")
-        .call(d3.axisLeft(yScaleGDP));
-
-    // Add Y axis for sectors
-    svg.append("g")
-        .attr("class", "y-axis")
-        .attr("transform", "translate(" + width + ",0)") // Right side axis
-   
-
-   
-    // Bar chart for GDP
-    const bars = svg.selectAll(".bar")
-        .data(gdpBarData)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("x", (d, i) => xScale(labels[i]))
-        .attr("y", d => yScaleGDP(d))
-        .attr("width", xScale.bandwidth())
-        .attr("height", d => height - yScaleGDP(d));
-
-    // Line chart function to draw each sector line
-    function drawLine(data, color) {
-        const line = d3.line()
-            .x((d, i) => xScale(labels[i]) + xScale.bandwidth() / 2) // Positioning at the middle of the bar
-            .y(d => yScaleSector(d));
-
-        return svg.append("path")
-            .data([data])
-            .attr("class", "line")
-            .attr("d", line)
-            .attr("stroke", color)
-            .attr("stroke-width", 2)
-            .attr("fill", "none");
-    }
-
-    // Draw sector lines
-    const agricultureLine = drawLine(agricultureData, "rgba(255, 99, 132, 1)");
-    const miningLine = drawLine(miningData, "rgba(255, 159, 64, 1)");
-    const manufacturingLine = drawLine(manufacturingData, "rgba(54, 162, 235, 1)");
-    const constructionLine = drawLine(constructionData, "rgba(153, 102, 255, 1)");
-    const servicesLine = drawLine(servicesData, "rgba(201, 203, 207, 1)");
-
-
-    // Add chart titles and labels
-    svg.append("text")
-        .attr("x", width / 2)
-        .attr("y", -10)
-        .attr("class", "chart-title")
-        .style("text-anchor", "middle",)
-        .text("Malaysia GDP and Sector Data (2015-2023)");
-
-    // Add label for the X axis (Year)
-    svg.append("text")
-        .attr("x", width / 2)  // Center the label below the axis
-        .attr("y", height + 50)  // Position it below the X axis
-        .style("text-anchor", "middle")
-        .attr("class", "axis-label")
-        .text("Year");
-
-    // Add title for the left Y axis
-    svg.append("text")
-        .attr("transform", "rotate(-90)")
-        .attr("x", -height / 2)
-        .attr("y", -40)
-        .style("text-anchor", "middle")
-        .attr("class", "axis-label")
-        .text("Overall GDP (MYR Billion)");
-
-            // Legend data
-    const legendData = [
-        { name: "Agriculture", color: "rgba(255, 99, 132, 1)" },
-        { name: "Mining", color: "rgba(255, 159, 64, 1)" },
-        { name: "Manufacturing", color: "rgba(54, 162, 235, 1)" },
-        { name: "Construction", color: "rgba(153, 102, 255, 1)" },
-        { name: "Services", color: "rgba(201, 203, 207, 1)" }
-    ];
-
-    // Add legend container
-    const legend = svg.append("g")
-        .attr("class", "legend")
-        .attr("transform", `translate(0, ${height + margin.bottom - 30})`); // Adjust position below the chart
-
-    // Add legend items
-    const legendItem = legend.selectAll(".legend-item")
-        .data(legendData)
-        .enter().append("g")
-        .attr("class", "legend-item")
-        .attr("transform", (d, i) => `translate(${i * 150}, 0)`); // Spacing between legend items
-
-    // Add legend rectangles (colored boxes)
-    legendItem.append("rect")
-        .attr("x", 100)
-        .attr("y", -445)
-        .attr("width", 20)
-        .attr("height", 20)
-        .attr("fill", d => d.color);
-
-    // Add legend text
-    legendItem.append("text")
-        .attr("x", 130) // Position text next to the rectangle
-        .attr("y", -430) // Center text vertically
-        .style("font-size", "14px")
-        .style("text-anchor", "start")
-        .text(d => d.name);
-
-        
-
-    // Create tooltip (hidden by default)
-    const tooltip = d3.select("#gdpChart")
-        .append("div")
-        .attr("class", "tooltip")
-        .style("position", "absolute")
-        .style("opacity", 0)
-        .style("background-color", "rgba(0, 0, 0, 0.75)")
-        .style("color", "#fff")
-        .style("padding", "10px")
-        .style("border-radius", "4px")
-        .style("font-size", "14px");
-
-    // Hover effect for GDP bar chart
-    bars.on("mouseover", function(event, d) {
-        const index = d3.select(this).datum(); // Get the index of the hovered bar
-        tooltip.transition()
-            .duration(200)
-            .style("opacity", 1); // Show tooltip
-
-        tooltip.html(`Year: ${labels[bars.nodes().indexOf(this)]}<br>GDP: ${d3.format(".2f")(d)} Billion MYR`)
-            .style("left", (event.pageX + 10) + "px")  // Position tooltip next to the cursor
-            .style("top", (event.pageY - 50) + "px");  // Position the tooltip above the cursor
+svg1.append("g")
+    .selectAll("g")
+    .data(data1)
+    .join("g")
+    .attr("transform", d => `translate(${x0(d.year)},0)`)
+    .selectAll("rect")
+    .data(d => ["industry", "household"].map(key => ({ key, value: d[key] })))
+    .join("rect")
+    .attr("x", d => x1(d.key))
+    .attr("y", d => y1(d.value))
+    .attr("width", x1.bandwidth())
+    .attr("height", d => height1 - y1(d.value))
+    .attr("fill", d => color1(d.key))
+    .on("mouseover", function(event, d) {
+        tooltip1.style("opacity", 1);
+        tooltip1.html(`${d.key}: ${d.value}`)
+            .style("left", `${event.pageX + 10}px`)
+            .style("top", `${event.pageY}px`);
     })
-    .on("mouseout", function(event, d) {
-        tooltip.transition()
-            .duration(200)
-            .style("opacity", 0); // Hide tooltip
+    .on("mouseout", () => {
+        tooltip1.style("opacity", 0);
     });
 
-    // Hover effect for sector line chart
-    function addHoverEffectWithDots(line, data, sectorName) {
-        // Add circles (dots) to the line chart
-        svg.selectAll(`.${sectorName}-dot`)
-            .data(data)
-            .enter().append("circle")
-            .attr("class", `${sectorName}-dot`)
-            .attr("cx", (d, i) => xScale(labels[i]) + xScale.bandwidth() / 2)
-            .attr("cy", d => yScaleSector(d))
-            .attr("r", 4)
-            .attr("fill", line.attr("stroke"))
-            .on("mouseover", function(event, d) {
-                const index = d3.select(this).datum();
-                tooltip.transition()
-                    .duration(200)
-                    .style("opacity", 1); // Show tooltip
+svg1.append("g")
+    .call(d3.axisLeft(y1));
 
-                tooltip.html(`Year: ${labels[svg.selectAll(`.${sectorName}-dot`).nodes().indexOf(this)]}<br>${sectorName} GDP: ${d3.format(".2f")(d)} MYR`)
-                    .style("left", (event.pageX + 10) + "px") // Position tooltip near the cursor
-                    .style("top", (event.pageY - 50) + "px");  // Position above the cursor
-            })
-            .on("mouseout", function(event, d) {
-                tooltip.transition()
-                    .duration(200)
-                    .style("opacity", 0); // Hide tooltip
-            });
-    }
+svg1.append("g")
+    .attr("transform", `translate(0,${height1})`)
+    .call(d3.axisBottom(x0));
 
-    // Add hover effects with dots for each sector line
-    addHoverEffectWithDots(agricultureLine, agricultureData, "Agriculture");
-    addHoverEffectWithDots(miningLine, miningData, "Mining");
-    addHoverEffectWithDots(manufacturingLine, manufacturingData, "Manufacturing");
-    addHoverEffectWithDots(constructionLine, constructionData, "Construction");
-    addHoverEffectWithDots(servicesLine, servicesData, "Services");
-});
+// Data for Chart 2
+const data2 = [
+    { year: "2014-15", household: 0.1872, industry: 8.53 },
+    { year: "2015-16", household: 0.1903, industry: 7.64 },
+    { year: "2016-17", household: 0.1837, industry: 7.86 },
+    { year: "2017-18", household: 0.1883, industry: 8.22 },
+    { year: "2018-19", household: 0.1861, industry: 6.74 },
+    { year: "2019-20", household: 0.1829, industry: 5.64 },
+    { year: "2020-21", household: 0.1812, industry: 6.90 },
+    { year: "2021-22", household: 0.1753, industry: 6.65 }
+];
+
+// Chart 2 Setup
+const margin2 = { top: 20, right: 30, bottom: 40, left: 50 },
+      width2 = 800 - margin2.left - margin2.right,
+      height2 = 500 - margin2.top - margin2.bottom;
+
+const svg2 = d3.select("#chart2")
+    .attr("width", width2 + margin2.left + margin2.right)
+    .attr("height", height2 + margin2.top + margin2.bottom)
+    .append("g")
+    .attr("transform", `translate(${margin2.left},${margin2.top})`);
+
+const y2 = d3.scaleBand()
+    .domain(data2.map(d => d.year))
+    .range([0, height2])
+    .padding(0.2);
+
+const x2 = d3.scaleLinear()
+    .domain([0, d3.max(data2, d => d.household + d.industry)])
+    .nice()
+    .range([0, width2]);
+
+const color2 = d3.scaleOrdinal()
+    .domain(["household", "industry"])
+    .range(["#1f77b4", "#ff7f0e"]);
+
+// Tooltip for Chart 2
+const tooltip2 = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0)
+    .style("position", "absolute")
+    .style("background", "#f9f9f9")
+    .style("padding", "8px")
+    .style("border", "1px solid #ddd")
+    .style("border-radius", "4px");
+
+const stack = d3.stack()
+    .keys(["household", "industry"]);
+
+svg2.selectAll(".bar")
+    .data(stack(data2))
+    .join("g")
+    .attr("fill", d => color2(d.key))
+    .selectAll("rect")
+    .data(d => d)
+    .join("rect")
+    .attr("y", d => y2(d.data.year))
+    .attr("x", d => x2(d[0]))
+    .attr("width", d => x2(d[1]) - x2(d[0]))
+    .attr("height", y2.bandwidth())
+    .on("mouseover", function(event, d) {
+        tooltip2.style("opacity", 1);
+        tooltip2.html(`${d.data.year}<br>${d[1] - d[0]}`)
+            .style("left", `${event.pageX + 10}px`)
+            .style("top", `${event.pageY}px`);
+    })
+    .on("mouseout", () => {
+        tooltip2.style("opacity", 0);
+    });
+
+svg2.append("g")
+    .call(d3.axisLeft(y2));
+
+svg2.append("g")
+    .attr("transform", `translate(0,${height2})`)
+    .call(d3.axisBottom(x2));
+
+    const legend1 = svg1.append("g")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 12)
+    .attr("text-anchor", "start")
+    .selectAll("g")
+    .data(["industry", "household"])
+    .join("g")
+    .attr("transform", (d, i) => `translate(${i * 100}, ${height1 + margin1.bottom - 20})`);
+
+legend1.append("rect")
+    .attr("x", 0)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", color1);
+
+legend1.append("text")
+    .attr("x", 25)
+    .attr("y", 10)
+    .attr("dy", "0.35em")
+    .text(d => d);
 
 
+    const legend2 = svg2.append("g")
+    .attr("font-family", "sans-serif")
+    .attr("font-size", 12)
+    .attr("text-anchor", "start")
+    .selectAll("g")
+    .data(["household", "industry"])
+    .join("g")
+    .attr("transform", (d, i) => `translate(${i * 100}, ${height2 + margin2.bottom - 20})`);
 
+legend2.append("rect")
+    .attr("x", 0)
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", color2);
 
-
-
+legend2.append("text")
+    .attr("x", 25)
+    .attr("y", 10)
+    .attr("dy", "0.35em")
+    .text(d => d);

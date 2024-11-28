@@ -1,4 +1,4 @@
-#gdpChart
+#chart1
 
 .line {
     fill: none;
@@ -44,3 +44,59 @@
     right: 30px;
     position: absolute;
 }
+
+
+
+
+
+
+
+        .bar {
+            fill: steelblue;
+        }
+        .bar:hover {
+            fill: orange;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+        .axis-label {
+            font-size: 12px;
+        }
+
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Add some space between elements */
+        }
+        
+        #chart1-container, #chart2-container {
+            width: 100%; /* Ensure the charts take full width of the container */
+            max-width: 800px; /* Restrict to the maximum width of the charts */
+            text-align: center; /* Center-align the content */
+            margin-bottom: 20px; /* Add spacing between the two charts */
+        }
+        
+        svg {
+            display: block; /* Ensure the SVG doesn't overflow */
+            margin: 0 auto; /* Center the chart horizontally */
+        }
+
+        <h2>Industry Water Intensity and Average Household Water Use</h2>
+        <svg width="800" height="800"></svg>
+        <div id="chart2"></div>
+        
+        <h1>Industry and household water prices</h1>
+        <svg width="800" height="500"></svg>
+        <div id="chart1"></div>
