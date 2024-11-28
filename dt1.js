@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const servicesData = [643883, 689969, 747360, 804993, 860130, 817713, 841692, 956737, 1018972];
 
     // Set up margins and dimensions for the chart
-    const margin = { top: 40, right: 500, bottom: 80, left: 600 };
-    const width = 1000;
-    const height = 600;
+    const margin = { top: 100, right: 60, bottom: 50, left: 500 };
+    const width = 1200;
+    const height = 500;
 
     // Create the SVG container
     const svg = d3.select("#gdpChart")

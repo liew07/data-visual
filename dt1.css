@@ -1,0 +1,46 @@
+#gdpChart
+
+.line {
+    fill: none;
+    stroke-width: 2;
+}
+.bar {
+    fill: rgba(75, 192, 192, 0.7);
+}
+.axis-label {
+    font-size: 12px;
+}
+
+.previous-btn:hover {
+    background-color: #c74d39; /* Green */
+    color: white;
+}
+
+.previous-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    position: relative;
+    margin-left: 23cap
+}
+
+.next-btn:hover {
+    background-color: #97d17a; /* Green */
+    color: white;
+}
+
+.next-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    right: 30px;
+    position: absolute;
+}

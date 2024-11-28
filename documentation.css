@@ -1,0 +1,32 @@
+.previous-btn:hover {
+    background-color: #c74d39; /* Green */
+    color: white;
+}
+
+.previous-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    position: relative;
+}
+
+.next-btn:hover {
+    background-color: #97d17a; /* Green */
+    color: white;
+}
+
+.next-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    right: 30px;
+    position: absolute;
+}
