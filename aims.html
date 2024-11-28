@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Data Visualisation Exercise 8.2" />
+    <meta name="keywords" content="HTML, CSS, JS, D3" />
+    <meta name="author" content="Tan Chai Ching" />
+
+    <title>Exercise 8.2 D3 Choropleth</title>
+    <!-- Link to the external JS file -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="aims.js" defer></script> <!-- External JavaScript file -->
+    <link rel="stylesheet" type="text/css" href="aims.css"> <!-- External CSS file -->
+</head>
+<body>
+    <div class="background"></div> 
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li id="Home" onclick="setActive('Home'); navigateTo('Assignment.html');">Home</li>
+                <li id="Background"  onclick="setActive('Background'); navigateTo('background.html');">Background</li>
+                <li id="Aim & Objectives" class="active" onclick="setActive('Aim & Objectives'); navigateTo('aims.html');">Aim & Objectives</li>
+                <li id="ict" class="dropdown">
+                    <button  onclick="toggleDropdown('dropdown-menu')">
+                        Project Overview▾
+                    </button>
+                    <ul id="dropdown-menu" class="dropdown-menu hidden">
+                        <li id="Visualisation 1" onclick="setActive('Visualisation 1'); navigateTo('dataset1.html');">
+                            Visualisation 1
+                        </li>
+                        <li id="Visualisation 2" onclick="setActive('Visualisation 2'); navigateTo('2.1.html');">
+                            Visualisation 2
+                        </li>
+                        <li id="Visualisation 3" onclick="setActive('Visualisation 3'); navigateTo('3.1.html');">
+                            Visualisation 3
+                        </li>
+                    </ul>
+                </li>
+                <li id="About Us"  onclick="setActive('About Us'); navigateTo('about.html');">About Us</li>
+                <li id="Documentation" onclick="setActive('Documentation'); navigateTo('documentation.html');">Documentation</li>
+            </ul>
+            
+        </div>
+
+        <!-- Open Sidebar Button -->
+        <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+            <!-- Content -->
+            <div class="content">
+        
+                <div class="about-section">
+                    <p class="title">Aim & Objectives</p>
+                    <p>Some text about who we are and what we do.</p>
+                    <p>Resize the browser window to see that this page is responsive by the way.</p>
+                </div>
+              
+
+               
+                <button  class="previous-btn" onclick="setActive('Aim & Objectives'); navigateTo('background.html');"><span>← Previous</span></button>
+                <button  class="next-btn" onclick="setActive('Aim & Objectives'); navigateTo('dataset1.html');"><span>Next →</span></button>
+
+                <!-- Footer -->
+                <div class="footer">@COS30045 Data Visualisation Project</div>
+                <div class="footer-right">By Jonathan & Chai Ching & Emelee</div>
+            </div>
+    </div>
+    
+</body>
+</html>

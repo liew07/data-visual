@@ -1,0 +1,286 @@
+/* Sidebar Styling */
+.sidebar {
+  width: 250px; /* Fixed width */
+  background-color: #484442;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease; /* Smooth toggle effect */
+  flex-shrink: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1000;
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%); /* Hide the sidebar */
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%); /* Hide the sidebar */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 28px 0 0; /* Add margin-top to move items down */
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, padding-left 0.3s;
+  font-size: 1.0em;
+  border-radius: 5px;
+}
+
+.sidebar ul li:hover {
+  background-color: #d9573f; /* Slightly darker coral */
+  padding-left: 10px;
+}
+
+.sidebar ul .active {
+  background-color: #97d17a; /* Green for active item */
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  list-style-type: none;
+  margin: 10px 0 0;
+  padding: 10px;
+  background-color: #e06d52;
+  border-radius: 5px;
+  display: none; /* Hidden by default */
+}
+
+.dropdown-menu li {
+  padding: 8px;
+  color: white;
+}
+
+.dropdown-menu li:hover {
+  background-color: #c74d39;
+}
+
+/* Show dropdown when active */
+.dropdown-menu.show {
+  display: block;
+}
+
+
+/* Style dropdown buttons to match sidebar items */
+.dropdown-menu button {
+  background: none;
+  border: none;
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s, padding-left 0.3s;
+  border-radius: 5px;
+}
+
+/* Hover effect for dropdown buttons */
+.dropdown-menu button:hover {
+  background-color: #c74d39; /* Match the hover color of the dropdown */
+  padding-left: 10px; /* Slight indent on hover */
+}
+
+/* Style active dropdown item */
+.dropdown-menu .active {
+  background-color: #97d17a; /* Match active green color */
+  color: white;
+  font-weight: bold;
+}
+
+/* Style for the dropdown button to look like the sidebar items */
+.sidebar ul li.dropdown button {
+  background-color: transparent; /* Remove button background */
+  border: none; /* Remove button border */
+  color: white; /* Match the text color of the sidebar */
+  font-size: 1.0em;
+  text-align: left;
+  padding: 0px;
+  width: 100%; /* Full width to match the sidebar */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, padding-left 0.3s; /* Smooth hover effect */
+  border-radius: 5px; /* Match rounded corners */
+}
+/* Hidden state */
+.hidden {
+  display: none;
+}
+
+/* Open/Close Button */
+.open-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: #484442;
+  color: white;
+  border: none;
+  font-size: 0.8em;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.open-btn.hidden {
+  display: none; /* Hide the open button when the sidebar is visible */
+}
+
+/* Content Area */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: 250px; /* Adjust based on sidebar width */
+  transition: margin-left 0.3s ease; /* Smooth transition */
+}
+
+.sidebar.hidden + .content {
+  margin-left: 0; /* Adjust when sidebar is hidden */
+}
+
+
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+
+.title {
+  font-size: 4rem;
+  color: #000000; /* Black or dark gray */
+  margin-bottom: -10px;
+  margin-top: -10px;
+}
+
+
+.about-section {
+   max-width: 1300px;
+  text-align: center;
+  background-color:#ffffff;
+  color: #484442;
+  margin:  auto;
+}
+
+
+.container {
+  padding: 1px; /* 减少内部容器的间距 */
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Footer Styling */
+.footer {
+  width: 100%;
+  text-align: left;
+  position: fixed; /* Always at the bottom of the viewport */
+  bottom: 0;
+  background-color: transparent; /* No background color */
+  color: #666; /* Light grey color for the text */
+  font-size: 0.7em;
+  padding: 10px 0;
+  z-index: 1100; /* Ensure it stays above other elements */
+}
+
+/* Footer Styling */
+.footer-right {
+  width: 100%;
+  text-align: right; /* Align text to the right */
+  position: fixed; /* Fix the footer at the bottom-right corner */
+  bottom: 0;/* Offset from the bottom edge */
+  right: 10px; /* Offset from the right edge */
+ 
+  background-color: transparent; /* No background color */
+  color: #666; /* Light grey text color */
+  font-size: 0.7em; /* Slightly smaller text size */
+  padding: 10px 0;
+  z-index: 1100; /* Ensure it stays on top of other elements */
+  
+}
+
+#map-container {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 1300px; /* Adjust the maximum width of the map */
+    height: auto;
+    margin: 10px auto;
+    border: 1px solid #cccccc;
+    background-color: #cceeff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+#map {
+    width: 100%; /* Make the map take up the full width of its container */
+    height: 470px; /* Adjust the height to make it larger */
+}
+
+.previous-btn:hover {
+    background-color: #c74d39; /* Green */
+    color: white;
+  }
+
+.previous-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    position: relative;
+    
+}
+
+.next-btn:hover {
+    background-color: #97d17a; /* Green */
+    color: white;
+  }
+
+.next-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    right: 30px;
+    position: absolute;
+}

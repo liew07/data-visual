@@ -1,12 +1,11 @@
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     const content = document.querySelector('.content');
- 
+
     if (sidebar.classList.contains('hidden')) {
         // Show sidebar
         sidebar.classList.remove('hidden');
         content.style.marginLeft = '250px'; // Adjust content margin for sidebar width
-   
         localStorage.setItem('sidebarVisible', 'true'); // Save state in localStorage
     } else {
         // Hide sidebar
@@ -32,6 +31,8 @@ window.onload = function () {
         content.style.marginLeft = '250px';
     }
 };
+
+
 
 
 function toggleDropdown() {
@@ -75,4 +76,5 @@ function navigateTo(url) {
     // Navigate to the specified URL
     window.location.href = url;
 }
+
 

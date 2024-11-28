@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Data Visualisation Exercise 8.2" />
+    <meta name="keywords" content="HTML, CSS, JS, D3" />
+    <meta name="author" content="Tan Chai Ching" />
+
+    <title>Exercise 8.2 D3 Choropleth</title>
+    <!-- Link to the external JS file -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="dataset2.js" defer></script> <!-- External JavaScript file -->
+    <link rel="stylesheet" type="text/css" href="dataset2.css"> <!-- External CSS file -->
+</head>
+
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li id="Home" onclick="setActive('Home'); navigateTo('Assignment.html');">Home</li>
+                <li id="Background" onclick="setActive('Background'); navigateTo('background.html');">Background</li>
+                <li id="Aim & Objectives" onclick="setActive('Aim & Objectives'); navigateTo('aims.html');">Aim & Objectives</li>
+                <li id="ict" class="dropdown">
+                    <button  onclick="toggleDropdown('dropdown-menu')">
+                        Project Overview▾
+                    </button>
+                    <ul id="dropdown-menu" class="dropdown-menu hidden">
+                        <li id="Visualisation 1" onclick="setActive('Visualisation 1'); navigateTo('dataset1.html');">
+                            Visualisation 1
+                        </li>
+                        <li class="active" id="Visualisation 2" onclick="setActive('Visualisation 2'); navigateTo('dataset2.html');">
+                            Visualisation 2
+                        </li>
+                        <li id="Visualisation 3" onclick="setActive('Visualisation 3'); navigateTo('3.1.html');">
+                            Visualisation 3
+                        </li>
+                    </ul>
+                </li>
+                <li id="About Us"   onclick="setActive('About Us'); navigateTo('about.html');">About Us</li>
+                <li id="Documentation" onclick="setActive('Documentation'); navigateTo('documentation.html');">Documentation</li>
+            </ul>
+            
+        </div>
+        
+         <!-- Open Sidebar Button -->
+         <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+        <!-- Content -->
+        <div class="content">
+    
+
+                <!-- Zoom buttons -->
+                <div id="controls">
+
+
+                        <input type="checkbox" class="checkbox" value="Agriculture" checked><label>Agriculture
+                        </label>
+                        <input type="checkbox" class="checkbox" value="Mining and quarrying" checked><label>Mining and quarrying
+                            </label>
+                        <input type="checkbox" class="checkbox" value="Manufacturing" checked><label>Manufacturing
+                        </label>
+                        <input type="checkbox" class="checkbox" value="Construction" checked><label>Construction
+                        </label>
+                        <input type="checkbox" class="checkbox" value="Services" checked><label>Services
+                        </label>
+
+                    <button id="zoom-in">+</button>
+                    <button id="zoom-out">-</button>
+                    <button id="east-malaysia">East Malaysia</button>
+                    <button id="west-malaysia">West Malaysia</button>
+                </div>
+                <div id="year-slider">
+                    <input type="range" id="yearRange" min="2015" max="2023" value="2023" step="1" />
+                    <label id="yearLabel" for="yearRange">2023</label>
+                </div>
+            
+                
+
+                <!-- Chart container -->
+                <svg id="map"></svg>
+
+                            <!-- Information Section (Right) -->
+                <div class="info-section">
+                    <div class="info-box">
+                        <h2>Percentage of GDP by sector</h2>
+                        <p id="total-visitors">22,232</p>
+                    </div>
+                    <div class="info-box">
+                        <h2>Percentage of GDP by Sector</h2>
+                        <div id="visitor-pie-chart">
+                            <!-- Placeholder for Pie Chart -->
+                            <svg width="50" height="100"></svg>
+                        </div>
+                        <ul class="legend">
+                            <li><span class="domestic"></span> Agriculture</li>
+                            <li><span class="foreign"></span> Mining and quarrying</li>
+                            <li><span class="domestic"></span> Manufacturing
+                            </label></li>
+                            <li><span class="foreign"></span> Construction
+                            </label></li>
+                            <li><span class="domestic"></span> Services</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <button  class="previous-btn" onclick="setActive('About Us'); navigateTo('3.1.html');"><span>← Previous</span></button>
+                <button  class="next-btn" onclick="setActive('About Us'); navigateTo('documentation.html');"><span>Next →</span></button>
+
+                <!-- Footer -->
+                <div class="footer">@COS30045 Data Visualisation Project</div>
+                <div class="footer-right">By Jonathan & Chai Ching & Emelee</div>
+            
+
+        </div>
+    
+</body>
+
+</html>
+
+
+

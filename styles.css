@@ -5,10 +5,21 @@ body {
     background-color: #f9f9f9;
 }
 
+.background {
+    content: ""; /* Empty content for the pseudo-element */
+    position: fixed; /* Positioned relative to the body */
+    width: 100%;
+    height: 130vh;
+    background-image: url('profile/Malaysia.jpg'); /* Replace with your image file path */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Ensure the image covers the viewport */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    filter: blur(3px); /* Apply blur effect */
+    z-index: -1; /* Place behind all content */
+}
+
 .container {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
+    padding: 1px; /* 减少内部容器的间距 */
 }
 
 /* Sidebar Styling */
@@ -34,7 +45,7 @@ body {
     position: fixed; /* Always at the bottom of the viewport */
     bottom: 0;
     background-color: transparent; /* No background color */
-    color: #666; /* Light grey color for the text */
+    color: #ffffff; /* Light grey color for the text */
     font-size: 0.7em;
     padding: 10px 0;
     z-index: 1100; /* Ensure it stays above other elements */
@@ -49,7 +60,7 @@ body {
     right: 10px; /* Offset from the right edge */
    
     background-color: transparent; /* No background color */
-    color: #666; /* Light grey text color */
+    color: #ffffff; /* Light grey text color */
     font-size: 0.7em; /* Slightly smaller text size */
     padding: 10px 0;
     z-index: 1100; /* Ensure it stays on top of other elements */
@@ -62,6 +73,9 @@ body {
 }
 
 
+.sidebar.hidden {
+    transform: translateX(-100%); /* Hide the sidebar */
+}
 
 .sidebar ul {
     list-style-type: none;
@@ -88,7 +102,6 @@ body {
     font-weight: bold;
 }
 
-
 /* Dropdown Menu Styling */
 .dropdown-menu {
     list-style-type: none;
@@ -113,6 +126,47 @@ body {
     display: block;
 }
 
+
+/* Style dropdown buttons to match sidebar items */
+.dropdown-menu button {
+    background: none;
+    border: none;
+    text-align: left;
+    color: white;
+    font-size: 1em;
+    padding: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s, padding-left 0.3s;
+    border-radius: 5px;
+}
+
+/* Hover effect for dropdown buttons */
+.dropdown-menu button:hover {
+    background-color: #c74d39; /* Match the hover color of the dropdown */
+    padding-left: 10px; /* Slight indent on hover */
+}
+
+/* Style active dropdown item */
+.dropdown-menu .active {
+    background-color: #97d17a; /* Match active green color */
+    color: white;
+    font-weight: bold;
+}
+
+/* Style for the dropdown button to look like the sidebar items */
+.sidebar ul li.dropdown button {
+    background-color: transparent; /* Remove button background */
+    border: none; /* Remove button border */
+    color: white; /* Match the text color of the sidebar */
+    font-size: 1.0em;
+    text-align: left;
+    padding: 0px;
+    width: 100%; /* Full width to match the sidebar */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, padding-left 0.3s; /* Smooth hover effect */
+    border-radius: 5px; /* Match rounded corners */
+}
 /* Hidden state */
 .hidden {
     display: none;
@@ -198,4 +252,64 @@ body {
     margin: 0;
     font-size: 0.9em;
     color: #666;
+}
+.homepage {
+    display: flex; /* Enables flexbox */
+        flex-direction: column; /* Arranges items in a column */
+        justify-content: center; /* Centers content vertically */
+        align-items: center; /* Centers content horizontally */
+        height: 80vh; /* Full height of the viewport */
+        text-align: center;
+        font-family: system-ui;
+        margin: 0; /* Removes default margins */
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff; /* White color */
+    padding: 0;
+    margin: 200px 0 20px; /* Increase top margin to move text down */
+    text-shadow: -1px -1px 0 #000, /* Top-left shadow */
+                 1px -1px 0 #000,  /* Top-right shadow */
+                 -1px 1px 0 #000,  /* Bottom-left shadow */
+                 1px 1px 0 #000;   /* Bottom-right shadow */
+}
+
+.subtitle {
+    font-size: 2.0rem;
+    color: #000000; /* Light gray */
+    margin-top: -10px;
+    text-shadow: -1px -1px 0 #ffffff, /* Top-left shadow */
+                 1px -1px 0#ffffff,  /* Top-right shadow */
+                 -1px 1px 0 #ffffff,  /* Bottom-left shadow */
+                 1px 1px 0 #ffffff;   /* Bottom-right shadow */
+}
+
+.discover-btn:hover {
+    background-color: #97d17a; /* Green */
+    color: white;
+  }
+
+.discover-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    position: relative;
+    animation: small-bounce 1.5s ease-in-out infinite; /* 简单弹跳效果 */
+}
+
+/* 小幅度弹跳的 keyframes */
+@keyframes small-bounce {
+    0%, 100% {
+        transform: translateY(0); /* 起始和结束位置 */
+    }
+    50% {
+        transform: translateY(-10px); /* 轻轻弹起 */
+    }
+   
 }
