@@ -54,7 +54,6 @@ const stack = d3.stack()
     .offset(d3.stackOffsetNone);
 
 const series = stack(data1);
-
 // Draw bars
 chartGroup.append("g")
     .selectAll("g")
@@ -77,6 +76,24 @@ chartGroup.append("g")
     .on("mouseout", () => {
         tooltip1.style("opacity", 0);
     });
+
+// Add text labels inside the bars
+chartGroup.append("g")
+    .selectAll("g")
+    .data(series)
+    .join("g")
+    .attr("fill", d => color(d.key))
+    .selectAll("text")
+    .data(d => d)
+    .join("text")
+    .attr("x", d => x(d.data.year) + x.bandwidth() / 2) // Center horizontally
+    .attr("y", d => y((d[0] + d[1]) / 2)) // Center vertically in the stack
+    .text(d => (d[1] - d[0]).toFixed(2)) // Display the value
+    .attr("fill", "white") // Use white text for better visibility
+    .attr("text-anchor", "middle") // Center the text horizontally
+    .attr("alignment-baseline", "middle"); // Center the text vertically
+
+
 
 // Axes
 chartGroup.append("g")
@@ -113,6 +130,8 @@ legend.selectAll("g")
             .style("font-size", "12px");
     });
 
+
+// Chart 2 Setup    
     document.addEventListener("DOMContentLoaded", () => {
         const barChartContainer = d3.select("#chart2");
         const margin = { top: 30, right: 30, bottom: 100, left: 60 };
