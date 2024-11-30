@@ -135,7 +135,7 @@ legend.selectAll("g")
     document.addEventListener("DOMContentLoaded", () => {
         const barChartContainer = d3.select("#chart2");
         const margin = { top: 30, right: 30, bottom: 100, left: 60 };
-        const width = 800 - margin.left - margin.right;
+        const width = 1000 - margin.left - margin.right;
         const height = 500 - margin.top - margin.bottom;
     
         const svg = barChartContainer
@@ -218,7 +218,7 @@ legend.selectAll("g")
                         .style("visibility", "visible")
                         .html(
                             `<strong>Measure:</strong> ${d.measure}<br>
-                             <strong>Value:</strong> ${d.value.toLocaleString()} ML`
+                            <strong>Value:</strong> ${d.value.toLocaleString()} ML`
                         );
                 })
                 .on("mousemove", (event) => {
@@ -242,6 +242,41 @@ legend.selectAll("g")
                 .style("border-radius", "5px")
                 .style("visibility", "hidden")
                 .style("font-size", "12px");
+
+
+                // Add Legend
+                const legend = svg
+                .append("g")
+                .attr("class", "legend")
+                .attr("transform", `translate(0, ${height + margin.bottom / 2})`);
+
+                const legendItems = measures.map((measure, i) => ({
+                measure,
+                color: color(measure),
+                }));
+
+                legend.selectAll(".legend-item")
+                .data(legendItems)
+                .enter()
+                .append("g")
+                .attr("class", "legend-item")
+                .attr("transform", (d, i) => `translate(${i * 190}, 0)`) // Adjust spacing between legend items
+                .call(g => {
+                    g.append("rect")
+                        .attr("x", 0)
+                        .attr("y", 0)
+                        .attr("width", 20)
+                        .attr("height", 20)
+                        .attr("fill", d => d.color);
+
+                    g.append("text")
+                        .attr("x", 30)
+                        .attr("y", 15)
+                        .text(d => d.measure)
+                        .attr("font-size", "12px")
+                        .attr("fill", "#000");
+                });
+
     
             });
         });
