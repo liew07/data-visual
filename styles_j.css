@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.background {
+    content: ""; /* Empty content for the pseudo-element */
+    position: fixed; /* Positioned relative to the body */
+    width: 100%;
+    height: 100vh;
+    background-image: url('profile/Australia.jpg'); /* Replace with your image file path */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Ensure the image covers the viewport */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    filter: blur(3px); /* Apply blur effect */
+    z-index: -1; /* Place behind all content */
+}
+
+.container {
+    padding: 1px; /* 减少内部容器的间距 */
+}
+
+
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    text-align: left;
+    position: fixed; /* Always at the bottom of the viewport */
+    bottom: 0;
+    background-color: transparent; /* No background color */
+    color: #000000; /* Light grey color for the text */
+    font-size: 0.7em;
+    padding: 10px 0;
+    z-index: 1100; /* Ensure it stays above other elements */
+}
+
+/* Footer Styling */
+.footer-right {
+    width: 100%;
+    text-align: right; /* Align text to the right */
+    position: fixed; /* Fix the footer at the bottom-right corner */
+    bottom: 0;/* Offset from the bottom edge */
+    right: 10px; /* Offset from the right edge */
+   
+    background-color: transparent; /* No background color */
+    color: #000000; /* Light grey text color */
+    font-size: 0.7em; /* Slightly smaller text size */
+    padding: 10px 0;
+    z-index: 1100; /* Ensure it stays on top of other elements */
+    
+}
+
+/* Content Area */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px; /* Adjust based on sidebar width */
+    transition: margin-left 0.3s ease; /* Smooth transition */
+}
+
+
+.homepage {
+    display: flex; /* Enables flexbox */
+        flex-direction: column; /* Arranges items in a column */
+        justify-content: center; /* Centers content vertically */
+        align-items: center; /* Centers content horizontally */
+        height: 80vh; /* Full height of the viewport */
+        text-align: center;
+        font-family: system-ui;
+        margin: 0; /* Removes default margins */
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffffff; /* White color */
+    padding: 0;
+    margin: 200px 0 20px; /* Increase top margin to move text down */
+    text-shadow: -1px -1px 0 #000, /* Top-left shadow */
+                 1px -1px 0 #000,  /* Top-right shadow */
+                 -1px 1px 0 #000,  /* Bottom-left shadow */
+                 1px 1px 0 #000;   /* Bottom-right shadow */
+}
+
+.subtitle {
+    font-size: 2.0rem;
+    color: #000000; /* Light gray */
+    margin-top: -10px;
+    text-shadow: -1px -1px 0 #ffffff, /* Top-left shadow */
+                 1px -1px 0#ffffff,  /* Top-right shadow */
+                 -1px 1px 0 #ffffff,  /* Bottom-left shadow */
+                 1px 1px 0 #ffffff;   /* Bottom-right shadow */
+}
+
+.discover-btn:hover {
+    background-color: #97d17a; /* Green */
+    color: white;
+  }
+
+.discover-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    position: relative;
+    animation: small-bounce 1.5s ease-in-out infinite; /* 简单弹跳效果 */
+}
+
+/* 小幅度弹跳的 keyframes */
+@keyframes small-bounce {
+    0%, 100% {
+        transform: translateY(0); /* 起始和结束位置 */
+    }
+    50% {
+        transform: translateY(-10px); /* 轻轻弹起 */
+    }
+   
+}
+.previous-btn:hover {
+    background-color: #c74d39; /* Green */
+    color: white;
+  }
+
+.previous-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    position: relative;
+    
+}
+
+.next-btn:hover {
+    background-color: #97d17a; /* Green */
+    color: white;
+  }
+
+.next-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    right: 30px;
+    position: absolute;
+}

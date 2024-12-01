@@ -1,0 +1,170 @@
+  .title {
+    font-size: 4rem;
+    color: #000000; /* Black or dark gray */
+    margin-bottom: -10px;
+    margin-top: -10px;
+  }
+  
+
+  .container {
+    padding: 1px; /* 减少内部容器的间距 */
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  #map-container {
+    border-radius: 5px;
+    width: 1000px;
+    max-width: 100%; /* Adjust the maximum width of the map */
+    height: 470px;
+    margin: 10px auto;
+    border: 1px solid #cccccc;
+    background-color: #cceeff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+#map {
+    width: 100%; /* Make the map take up the full width of its container */
+    height: 500px; /* Adjust the height to make it larger */
+}
+  
+
+
+
+body {
+    font-family: system-ui;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh; /* Ensures the body takes full screen height */
+    background-color: #f9f9f9; /* Optional background color */
+
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+
+#controls {
+    margin: 20px;
+    text-align: center;
+}
+
+
+#year-slider {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#yearRange {
+    width: 80%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+#yearRange:hover {
+    opacity: 1;
+}
+
+#yearRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #0d1117;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#yearRange::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0d1117;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#yearLabel {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+
+.previous-btn:hover {
+    background-color: #c74d39; /* Green */
+    color: white;
+  }
+  
+  .previous-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    position: relative;
+    
+  }
+  
+  .next-btn:hover {
+    background-color: #97d17a; /* Green */
+    color: white;
+  }
+  
+  .next-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    right: 30px;
+ 
+  }
+  
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    text-align: left;
+    position: fixed; /* Always at the bottom of the viewport */
+    bottom: 0;
+    background-color: transparent; /* No background color */
+    color: #666; /* Light grey color for the text */
+    font-size: 0.7em;
+    padding: 10px 0;
+    z-index: 1100; /* Ensure it stays above other elements */
+  }
+  
+  /* Footer Styling */
+  .footer-right {
+    width: 100%;
+    text-align: right; /* Align text to the right */
+    position: fixed; /* Fix the footer at the bottom-right corner */
+    bottom: 0;/* Offset from the bottom edge */
+    right: 10px; /* Offset from the right edge */
+   
+    background-color: transparent; /* No background color */
+    color: #666; /* Light grey text color */
+    font-size: 0.7em; /* Slightly smaller text size */
+    padding: 10px 0;
+    z-index: 1100; /* Ensure it stays on top of other elements */
+    
+  }
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Data Visualisation Exercise 8.2" />
+    <meta name="keywords" content="HTML, CSS, JS, D3" />
+    <meta name="author" content="Tan Chai Ching" />
+
+    <title>Data Visualisation Project</title>
+    <!-- Link to the external JS file -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="aims.js" defer></script> <!-- External JavaScript file -->
+    <link rel="stylesheet" type="text/css" href="aims.css"> <!-- External CSS file -->
+</head>
+<body>
+    <div class="background"></div> 
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li id="Home" onclick="setActive('Home'); navigateTo('index.html');">Home</li>
+                <li id="Background"  onclick="setActive('Background'); navigateTo('background.html');">Background</li>
+                <li id="Aim & Objectives" class="active" onclick="setActive('Aim & Objectives'); navigateTo('aims.html');">Aim & Objectives</li>
+                <li id="ict" class="dropdown">
+                    <button  onclick="toggleDropdown('dropdown-menu')">
+                        Project Overview▾
+                    </button>
+                    <ul id="dropdown-menu" class="dropdown-menu hidden">
+                        <li id="Visualisation 1" onclick="setActive('Visualisation 1'); navigateTo('dataset1.html');">
+                            Visualisation 1
+                        </li>
+                        <li id="Visualisation 2" onclick="setActive('Visualisation 2'); navigateTo('dataset2.1.html');">
+                            Visualisation 2
+                        </li>
+                        <li id="Visualisation 3" onclick="setActive('Visualisation 3'); navigateTo('dataset2.2.html');">
+                            Visualisation 3
+                        </li>
+                        <li id="Visualisation 4" onclick="setActive('Visualisation 4'); navigateTo('dataset2.3.html');">
+                            Visualisation 4
+                        </li>
+                    </ul>
+                </li>
+                <li id="About Us"  onclick="setActive('About Us'); navigateTo('about.html');">About Us</li>
+                <li id="Documentation" onclick="setActive('Documentation'); navigateTo('documentation.html');">Documentation</li>
+            </ul>
+            
+        </div>
+
+        <!-- Open Sidebar Button -->
+        <button class="open-btn" onclick="toggleSidebar()">☰</button>
+
+            <!-- Content -->
+            <div class="content">
+        
+                <div class="about-section">
+                    <p class="title">Aim & Objectives</p>
+                    <p>To analyze and visualize trends in water pricing, usage, and expenditure across industries and households in Australia, providing insights for sustainable water management and informed decision-making.</p>
+                    <p>To examine and compare water prices for households and industries in Australia.</p>
+                    <p>To assess water intensity in various industries and average household water use.</p>
+                    <p>To visualize the distribution of water use across selected industries and households.</p>
+                    <p>To analyze expenditure and physical water use for households and industries.</p>
+                    <p>To create engaging data visualizations to highlight key insights and trends.</p>
+                </div>
+              
+                <button  class="previous-btn" onclick="setActive('Aim & Objectives'); navigateTo('background.html');"><span>← Previous</span></button>
+                <button  class="next-btn" onclick="setActive('Aim & Objectives'); navigateTo('dataset1.html');"><span>Next →</span></button>
+
+                <!-- Footer -->
+                <div class="footer">@COS30045 Data Visualisation Project</div>
+                <div class="footer-right">By Jonathan & Chai Ching & Emelee</div>
+            </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 32px;
+  color: #4a90e2;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.chart-container {
+  width: 850px;
+  border-radius: 10px;
+  height: auto; /* Adjust height to fit dynamic content */
+  background-color: #666;
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items at the top */
+  align-items: center; /* Center items horizontally */
+  padding: 20px; /* Add some spacing inside the container */
+}
+
+.chart-title {
+  color: white; /* Make the text visible on the dark background */
+  font-size: 18px; /* Adjust font size */
+  font-weight: bold;
+  margin-bottom: 20px; /* Add space below the title */
+  text-align: center; /* Center the text */
+}
+
+#pieChartGL, #pieChartBillions, #lineChart {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  font-size: 18px; /* Increases font size */
+  padding: 10px 20px; /* Adjusts size of the button (top/bottom, left/right) */
+  color: white; /* Text color */
+  background-color: #4a90e2; /* Background color */
+  border: none; /* Removes border */
+  border-radius: 10px; /* Rounds the corners */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Adds smooth transition effects */
+}
+
+button:hover {
+  background-color: #357ab8; /* Changes color on hover */
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+button:active {
+  background-color: #2a5c8c; /* Darker color when the button is clicked */
+  transform: scale(0.95); /* Slightly reduces size when clicked */
+}
+
+/* Optional: If you have multiple buttons and want different colors or sizes */
+button.large {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+button.small {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+button.primary {
+  background-color: #28a745; /* Green for a primary button */
+}
+
+button.secondary {
+  background-color: #ffc107; /* Yellow for a secondary button */
+}

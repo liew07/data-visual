@@ -1,0 +1,210 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.checkbox-container {
+    margin-bottom: 20px;
+}
+
+
+
+label {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.chart-container {
+    width: 750px;
+    border-radius: 10px;
+    height: 550px;
+    background-color: #666;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.chart-container {
+    width: 750px;
+    border-radius: 10px;
+    height: auto; /* Adjust height to fit dynamic content */
+    background-color: #666;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: center; /* Center items horizontally */
+    padding: 20px; /* Add some spacing inside the container */
+}
+
+.chart-title {
+    color: white; /* Make the text visible on the dark background */
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold;
+    margin-bottom: 20px; /* Add space below the title */
+    text-align: center; /* Center the text */
+}
+
+
+.chart-container2 {
+    width: 900px;
+    border-radius: 10px;
+    height: auto;
+    background-color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.chart-title2 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#barchart {
+    width: 800px;
+    height: 500px;
+}
+
+.chart-container3 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chart-title3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.chart-container4 {
+    margin: 20px;
+}
+
+.chart-title4 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#map {
+    width: 100%;
+    height: 800px;
+    background-color: #444444;
+}
+
+#year-selector {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.tooltip {
+    position: absolute;
+    padding: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+#year-slider {
+    width: 300px;
+}
+
+.legend-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.legend-item div {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+.previous-btn:hover {
+    background-color: #c74d39; /* Green */
+    color: white;
+  }
+  
+  .previous-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    position: relative;
+    
+  }
+  
+  .next-btn:hover {
+    background-color: #97d17a; /* Green */
+    color: white;
+  }
+  
+  .next-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: white;
+    border: 2px solid #1e1e1e;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #1e1e1e;
+    right: 30px;
+ 
+  }
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    text-align: left;
+    position: fixed; /* Always at the bottom of the viewport */
+    bottom: 0;
+    background-color: transparent; /* No background color */
+    color: #666; /* Light grey color for the text */
+    font-size: 0.7em;
+    padding: 10px 0;
+    z-index: 1100; /* Ensure it stays above other elements */
+  }
+  
+  /* Footer Styling */
+  .footer-right {
+    width: 100%;
+    text-align: right; /* Align text to the right */
+    position: fixed; /* Fix the footer at the bottom-right corner */
+    bottom: 0;/* Offset from the bottom edge */
+    right: 10px; /* Offset from the right edge */
+   
+    background-color: transparent; /* No background color */
+    color: #666; /* Light grey text color */
+    font-size: 0.7em; /* Slightly smaller text size */
+    padding: 10px 0;
+    z-index: 1100; /* Ensure it stays on top of other elements */
+    
+  }
