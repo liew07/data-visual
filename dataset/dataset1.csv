@@ -1,0 +1,337 @@
+﻿Year,Measure,State,WaterUseInMegaliters
+2015-16,"Agriculture, forestry, fishing",New South Wales,3090799
+2016-17,"Agriculture, forestry, fishing",New South Wales,4517784
+2017-18,"Agriculture, forestry, fishing",New South Wales,4854999
+2018-19,"Agriculture, forestry, fishing",New South Wales,2982694
+2019-20,"Agriculture, forestry, fishing",New South Wales,1567189
+2020-21,"Agriculture, forestry, fishing",New South Wales,3511287
+2021-22,"Agriculture, forestry, fishing",New South Wales,3901033
+2015-16,Households,New South Wales,542236
+2016-17,Households,New South Wales,560169
+2017-18,Households,New South Wales,598213
+2018-19,Households,New South Wales,575543
+2019-20,Households,New South Wales,551034
+2020-21,Households,New South Wales,544567
+2021-22,Households,New South Wales,528382
+2015-16,Mining and quarrying,New South Wales,N/A
+2016-17,Mining and quarrying,New South Wales,N/A
+2017-18,Mining and quarrying,New South Wales,185177
+2018-19,Mining and quarrying,New South Wales,173544
+2019-20,Mining and quarrying,New South Wales,172548
+2020-21,Mining and quarrying,New South Wales,148751
+2021-22,Mining and quarrying,New South Wales,135765
+2015-16,Electricity production,New South Wales,10391741
+2016-17,Electricity production,New South Wales,11196881
+2017-18,Electricity production,New South Wales,N/A
+2018-19,Electricity production,New South Wales,N/A
+2019-20,Electricity production,New South Wales,N/A
+2020-21,Electricity production,New South Wales,N/A
+2021-22,Electricity production,New South Wales,N/A
+2015-16,Manufacturing,New South Wales,118059
+2016-17,Manufacturing,New South Wales,121465
+2017-18,Manufacturing,New South Wales,115935
+2018-19,Manufacturing,New South Wales,111232
+2019-20,Manufacturing,New South Wales,115859
+2020-21,Manufacturing,New South Wales,118134
+2021-22,Manufacturing,New South Wales,N/A
+2015-16,Water supply,New South Wales,5368476
+2016-17,Water supply,New South Wales,6825399
+2017-18,Water supply,New South Wales,6787741
+2018-19,Water supply,New South Wales,5057524
+2019-20,Water supply,New South Wales,N/A
+2020-21,Water supply,New South Wales,N/A
+2021-22,Water supply,New South Wales,6687693
+2015-16,"Agriculture, forestry, fishing",Victoria,2616385
+2016-17,"Agriculture, forestry, fishing",Victoria,2492647
+2017-18,"Agriculture, forestry, fishing",Victoria,N/A
+2018-19,"Agriculture, forestry, fishing",Victoria,2652713
+2019-20,"Agriculture, forestry, fishing",Victoria,1995735
+2020-21,"Agriculture, forestry, fishing",Victoria,2326333
+2021-22,"Agriculture, forestry, fishing",Victoria,2169340
+2015-16,Households,Victoria,399571
+2016-17,Households,Victoria,389607
+2017-18,Households,Victoria,399167
+2018-19,Households,Victoria,418648
+2019-20,Households,Victoria,414802
+2020-21,Households,Victoria,420807
+2021-22,Households,Victoria,419868
+2015-16,Mining and quarrying,Victoria,22492
+2016-17,Mining and quarrying,Victoria,N/A
+2017-18,Mining and quarrying,Victoria,21460
+2018-19,Mining and quarrying,Victoria,20742
+2019-20,Mining and quarrying,Victoria,N/A
+2020-21,Mining and quarrying,Victoria,N/A
+2021-22,Mining and quarrying,Victoria,N/A
+2015-16,Electricity production,Victoria,4695245
+2016-17,Electricity production,Victoria,4562908
+2017-18,Electricity production,Victoria,4449564
+2018-19,Electricity production,Victoria,N/A
+2019-20,Electricity production,Victoria,N/A
+2020-21,Electricity production,Victoria,N/A
+2021-22,Electricity production,Victoria,4547504
+2015-16,Manufacturing,Victoria,178028
+2016-17,Manufacturing,Victoria,176784
+2017-18,Manufacturing,Victoria,182093
+2018-19,Manufacturing,Victoria,180994
+2019-20,Manufacturing,Victoria,169994
+2020-21,Manufacturing,Victoria,N/A
+2021-22,Manufacturing,Victoria,N/A
+2015-16,Water supply,Victoria,N/A
+2016-17,Water supply,Victoria,3906900
+2017-18,Water supply,Victoria,4524965
+2018-19,Water supply,Victoria,4358627
+2019-20,Water supply,Victoria,3536254
+2020-21,Water supply,Victoria,3910670
+2021-22,Water supply,Victoria,N/A
+2015-16,"Agriculture, forestry, fishing",Queensland,N/A
+2016-17,"Agriculture, forestry, fishing",Queensland,2548493
+2017-18,"Agriculture, forestry, fishing",Queensland,2573131
+2018-19,"Agriculture, forestry, fishing",Queensland,1852006
+2019-20,"Agriculture, forestry, fishing",Queensland,1943503
+2020-21,"Agriculture, forestry, fishing",Queensland,2239118
+2021-22,"Agriculture, forestry, fishing",Queensland,2360810
+2015-16,Households,Queensland,340271
+2016-17,Households,Queensland,338882
+2017-18,Households,Queensland,340804
+2018-19,Households,Queensland,348983
+2019-20,Households,Queensland,369308
+2020-21,Households,Queensland,362742
+2021-22,Households,Queensland,346506
+2015-16,Mining and quarrying,Queensland,N/A
+2016-17,Mining and quarrying,Queensland,N/A
+2017-18,Mining and quarrying,Queensland,261650
+2018-19,Mining and quarrying,Queensland,247490
+2019-20,Mining and quarrying,Queensland,259729
+2020-21,Mining and quarrying,Queensland,256794
+2021-22,Mining and quarrying,Queensland,237855
+2015-16,Electricity production,Queensland,744025
+2016-17,Electricity production,Queensland,661594
+2017-18,Electricity production,Queensland,N/A
+2018-19,Electricity production,Queensland,N/A
+2019-20,Electricity production,Queensland,N/A
+2020-21,Electricity production,Queensland,N/A
+2021-22,Electricity production,Queensland,N/A
+2015-16,Manufacturing,Queensland,N/A
+2016-17,Manufacturing,Queensland,169210
+2017-18,Manufacturing,Queensland,182411
+2018-19,Manufacturing,Queensland,182929
+2019-20,Manufacturing,Queensland,198154
+2020-21,Manufacturing,Queensland,202279
+2021-22,Manufacturing,Queensland,177141
+2015-16,Water supply,Queensland,3083608
+2016-17,Water supply,Queensland,2878978
+2017-18,Water supply,Queensland,2857675
+2018-19,Water supply,Queensland,2594574
+2019-20,Water supply,Queensland,2906234
+2020-21,Water supply,Queensland,3025723
+2021-22,Water supply,Queensland,3317540
+2015-16,"Agriculture, forestry, fishing",South Australia,N/A
+2016-17,"Agriculture, forestry, fishing",South Australia,N/A
+2017-18,"Agriculture, forestry, fishing",South Australia,612881
+2018-19,"Agriculture, forestry, fishing",South Australia,657410
+2019-20,"Agriculture, forestry, fishing",South Australia,731475
+2020-21,"Agriculture, forestry, fishing",South Australia,759145
+2021-22,"Agriculture, forestry, fishing",South Australia,701411
+2015-16,Households,South Australia,133629
+2016-17,Households,South Australia,115670
+2017-18,Households,South Australia,136679
+2018-19,Households,South Australia,140129
+2019-20,Households,South Australia,136211
+2020-21,Households,South Australia,141253
+2021-22,Households,South Australia,141125
+2015-16,Mining and quarrying,South Australia,N/A
+2016-17,Mining and quarrying,South Australia,N/A
+2017-18,Mining and quarrying,South Australia,42907
+2018-19,Mining and quarrying,South Australia,40947
+2019-20,Mining and quarrying,South Australia,42187
+2020-21,Mining and quarrying,South Australia,N/A
+2021-22,Mining and quarrying,South Australia,43285
+2015-16,Electricity production,South Australia,8338
+2016-17,Electricity production,South Australia,4006
+2017-18,Electricity production,South Australia,N/A
+2018-19,Electricity production,South Australia,N/A
+2019-20,Electricity production,South Australia,N/A
+2020-21,Electricity production,South Australia,N/A
+2021-22,Electricity production,South Australia,N/A
+2015-16,Manufacturing,South Australia,35887
+2016-17,Manufacturing,South Australia,39990
+2017-18,Manufacturing,South Australia,43942
+2018-19,Manufacturing,South Australia,40940
+2019-20,Manufacturing,South Australia,41062
+2020-21,Manufacturing,South Australia,N/A
+2021-22,Manufacturing,South Australia,N/A
+2015-16,Water supply,South Australia,692423
+2016-17,Water supply,South Australia,615382
+2017-18,Water supply,South Australia,N/A
+2018-19,Water supply,South Australia,668599
+2019-20,Water supply,South Australia,722419
+2020-21,Water supply,South Australia,739962
+2021-22,Water supply,South Australia,695431
+2015-16,"Agriculture, forestry, fishing",Western Australia,362355
+2016-17,"Agriculture, forestry, fishing",Western Australia,N/A
+2017-18,"Agriculture, forestry, fishing",Western Australia,N/A
+2018-19,"Agriculture, forestry, fishing",Western Australia,N/A
+2019-20,"Agriculture, forestry, fishing",Western Australia,N/A
+2020-21,"Agriculture, forestry, fishing",Western Australia,N/A
+2021-22,"Agriculture, forestry, fishing",Western Australia,N/A
+2015-16,Households,Western Australia,245175
+2016-17,Households,Western Australia,233745
+2017-18,Households,Western Australia,234417
+2018-19,Households,Western Australia,236322
+2019-20,Households,Western Australia,247007
+2020-21,Households,Western Australia,248005
+2021-22,Households,Western Australia,251455
+2015-16,Mining and quarrying,Western Australia,696804
+2016-17,Mining and quarrying,Western Australia,727012
+2017-18,Mining and quarrying,Western Australia,N/A
+2018-19,Mining and quarrying,Western Australia,N/A
+2019-20,Mining and quarrying,Western Australia,N/A
+2020-21,Mining and quarrying,Western Australia,N/A
+2021-22,Mining and quarrying,Western Australia,N/A
+2015-16,Electricity production,Western Australia,1957744
+2016-17,Electricity production,Western Australia,1923624
+2017-18,Electricity production,Western Australia,1995056
+2018-19,Electricity production,Western Australia,1961862
+2019-20,Electricity production,Western Australia,1859947
+2020-21,Electricity production,Western Australia,1162636
+2021-22,Electricity production,Western Australia,700917
+2015-16,Manufacturing,Western Australia,69257
+2016-17,Manufacturing,Western Australia,N/A
+2017-18,Manufacturing,Western Australia,81092
+2018-19,Manufacturing,Western Australia,80422
+2019-20,Manufacturing,Western Australia,71851
+2020-21,Manufacturing,Western Australia,N/A
+2021-22,Manufacturing,Western Australia,N/A
+2015-16,Water supply,Western Australia,864391
+2016-17,Water supply,Western Australia,881954
+2017-18,Water supply,Western Australia,N/A
+2018-19,Water supply,Western Australia,N/A
+2019-20,Water supply,Western Australia,N/A
+2020-21,Water supply,Western Australia,N/A
+2021-22,Water supply,Western Australia,N/A
+2015-16,"Agriculture, forestry, fishing",Tasmania,302876
+2016-17,"Agriculture, forestry, fishing",Tasmania,248355
+2017-18,"Agriculture, forestry, fishing",Tasmania,274581
+2018-19,"Agriculture, forestry, fishing",Tasmania,N/A
+2019-20,"Agriculture, forestry, fishing",Tasmania,336497
+2020-21,"Agriculture, forestry, fishing",Tasmania,344788
+2021-22,"Agriculture, forestry, fishing",Tasmania,337803
+2015-16,Households,Tasmania,31900
+2016-17,Households,Tasmania,32681
+2017-18,Households,Tasmania,35483
+2018-19,Households,Tasmania,37252
+2019-20,Households,Tasmania,36432
+2020-21,Households,Tasmania,34226
+2021-22,Households,Tasmania,34578
+2015-16,Mining and quarrying,Tasmania,N/A
+2016-17,Mining and quarrying,Tasmania,N/A
+2017-18,Mining and quarrying,Tasmania,26735
+2018-19,Mining and quarrying,Tasmania,N/A
+2019-20,Mining and quarrying,Tasmania,N/A
+2020-21,Mining and quarrying,Tasmania,N/A
+2021-22,Mining and quarrying,Tasmania,35168
+2015-16,Electricity production,Tasmania,30854486
+2016-17,Electricity production,Tasmania,35367564
+2017-18,Electricity production,Tasmania,N/A
+2018-19,Electricity production,Tasmania,N/A
+2019-20,Electricity production,Tasmania,N/A
+2020-21,Electricity production,Tasmania,N/A
+2021-22,Electricity production,Tasmania,N/A
+2015-16,Manufacturing,Tasmania,44813
+2016-17,Manufacturing,Tasmania,47687
+2017-18,Manufacturing,Tasmania,42398
+2018-19,Manufacturing,Tasmania,43186
+2019-20,Manufacturing,Tasmania,43640
+2020-21,Manufacturing,Tasmania,43905
+2021-22,Manufacturing,Tasmania,42915
+2015-16,Water supply,Tasmania,N/A
+2016-17,Water supply,Tasmania,N/A
+2017-18,Water supply,Tasmania,260485
+2018-19,Water supply,Tasmania,274174
+2019-20,Water supply,Tasmania,317358
+2020-21,Water supply,Tasmania,311020
+2021-22,Water supply,Tasmania,330016
+2015-16,"Agriculture, forestry, fishing",Northern Territory,43419
+2016-17,"Agriculture, forestry, fishing",Northern Territory,89906
+2017-18,"Agriculture, forestry, fishing",Northern Territory,81573
+2018-19,"Agriculture, forestry, fishing",Northern Territory,58243
+2019-20,"Agriculture, forestry, fishing",Northern Territory,42277
+2020-21,"Agriculture, forestry, fishing",Northern Territory,N/A
+2021-22,"Agriculture, forestry, fishing",Northern Territory,N/A
+2015-16,Households,Northern Territory,27578
+2016-17,Households,Northern Territory,24852
+2017-18,Households,Northern Territory,25890
+2018-19,Households,Northern Territory,26607
+2019-20,Households,Northern Territory,26321
+2020-21,Households,Northern Territory,25486
+2021-22,Households,Northern Territory,26567
+2015-16,Mining and quarrying,Northern Territory,32170
+2016-17,Mining and quarrying,Northern Territory,23966
+2017-18,Mining and quarrying,Northern Territory,21941
+2018-19,Mining and quarrying,Northern Territory,29477
+2019-20,Mining and quarrying,Northern Territory,40798
+2020-21,Mining and quarrying,Northern Territory,43297
+2021-22,Mining and quarrying,Northern Territory,N/A
+2015-16,Electricity production,Northern Territory,10901
+2016-17,Electricity production,Northern Territory,10760
+2017-18,Electricity production,Northern Territory,N/A
+2018-19,Electricity production,Northern Territory,N/A
+2019-20,Electricity production,Northern Territory,N/A
+2020-21,Electricity production,Northern Territory,N/A
+2021-22,Electricity production,Northern Territory,N/A
+2015-16,Manufacturing,Northern Territory,N/A
+2016-17,Manufacturing,Northern Territory,91
+2017-18,Manufacturing,Northern Territory,81
+2018-19,Manufacturing,Northern Territory,88
+2019-20,Manufacturing,Northern Territory,48
+2020-21,Manufacturing,Northern Territory,45
+2021-22,Manufacturing,Northern Territory,N/A
+2015-16,Water supply,Northern Territory,87556
+2016-17,Water supply,Northern Territory,N/A
+2017-18,Water supply,Northern Territory,N/A
+2018-19,Water supply,Northern Territory,N/A
+2019-20,Water supply,Northern Territory,88202
+2020-21,Water supply,Northern Territory,89663
+2021-22,Water supply,Northern Territory,N/A
+2015-16,"Agriculture, forestry, fishing",Australian Capital Territory,306
+2016-17,"Agriculture, forestry, fishing",Australian Capital Territory,469
+2017-18,"Agriculture, forestry, fishing",Australian Capital Territory,291
+2018-19,"Agriculture, forestry, fishing",Australian Capital Territory,233
+2019-20,"Agriculture, forestry, fishing",Australian Capital Territory,N/A
+2020-21,"Agriculture, forestry, fishing",Australian Capital Territory,N/A
+2021-22,"Agriculture, forestry, fishing",Australian Capital Territory,N/A
+2015-16,Households,Australian Capital Territory,31272
+2016-17,Households,Australian Capital Territory,31000
+2017-18,Households,Australian Capital Territory,32337
+2018-19,Households,Australian Capital Territory,33881
+2019-20,Households,Australian Capital Territory,35564
+2020-21,Households,Australian Capital Territory,32014
+2021-22,Households,Australian Capital Territory,30390
+2015-16,Mining and quarrying,Australian Capital Territory,307
+2016-17,Mining and quarrying,Australian Capital Territory,N/A
+2017-18,Mining and quarrying,Australian Capital Territory,106
+2018-19,Mining and quarrying,Australian Capital Territory,114
+2019-20,Mining and quarrying,Australian Capital Territory,145
+2020-21,Mining and quarrying,Australian Capital Territory,176
+2021-22,Mining and quarrying,Australian Capital Territory,N/A
+2015-16,Electricity production,Australian Capital Territory,N/A
+2016-17,Electricity production,Australian Capital Territory,N/A
+2017-18,Electricity production,Australian Capital Territory,N/A
+2018-19,Electricity production,Australian Capital Territory,N/A
+2019-20,Electricity production,Australian Capital Territory,N/A
+2020-21,Electricity production,Australian Capital Territory,N/A
+2021-22,Electricity production,Australian Capital Territory,N/A
+2015-16,Manufacturing,Australian Capital Territory,N/A
+2016-17,Manufacturing,Australian Capital Territory,N/A
+2017-18,Manufacturing,Australian Capital Territory,N/A
+2018-19,Manufacturing,Australian Capital Territory,N/A
+2019-20,Manufacturing,Australian Capital Territory,N/A
+2020-21,Manufacturing,Australian Capital Territory,N/A
+2021-22,Manufacturing,Australian Capital Territory,N/A
+2015-16,Water supply,Australian Capital Territory,N/A
+2016-17,Water supply,Australian Capital Territory,N/A
+2017-18,Water supply,Australian Capital Territory,N/A
+2018-19,Water supply,Australian Capital Territory,87029
+2019-20,Water supply,Australian Capital Territory,90893
+2020-21,Water supply,Australian Capital Territory,N/A
+2021-22,Water supply,Australian Capital Territory,N/A
